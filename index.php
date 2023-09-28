@@ -1,3 +1,6 @@
+<?php
+ include_once("funcoes.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
