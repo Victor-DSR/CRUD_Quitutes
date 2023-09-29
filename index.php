@@ -29,7 +29,7 @@
 		}
         .container {
             background-color: white;
-        }
+        } 
 </style>
 <body>
         <div class="container">
@@ -46,6 +46,25 @@
                 <th>Ingredientes</th>
                 <th>Preço</th>
                 <th colspan="2">Opções</th>
+                    </tr>
+                    <?php
+                     foreach($usuario as $usuario){
+                     echo "<tr>";
+                     echo "<td>" . $usuario["Nome"] . "</td>";
+                     echo "<td>" . $usuario["Sabor"] . "</td>";
+                     echo "<td>" . $usuario["Ingredientes"] . "</td>";
+                     echo "<td>" . $usuario["Preço"] . "</td>";
+                     echo "<td><a class='button' href='cadres1.php?id=". $usuario['id'] ."' style='text-decoration: none'> Editar </a></td>";
+                     echo "<td><a class='button' href='excres1.php?id=". $usuario['id'] ."' style='text-decoration: none'> Excluir </a></td>";
+                     echo "</tr>"; }
+                     ?>
+                    <tr>
+                <td>Brigadeiro</td>
+                <td>Chocolate Preto</td>
+                <td>Leite Condensado, Chocolate em Pó, Manteiga.</td>
+                <td>3,00</th>
+                <td><button>Editar</button></td>
+                <td><button>Excluir</button></td>
                     </tr>
                 </thead>
                 </table>
