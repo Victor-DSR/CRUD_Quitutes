@@ -11,5 +11,5 @@ function conectar(){
     } else {
         die("Problemas ao acessar o banco de dados. Erro: " . mysqli_connect_errno() . "" . mysqli_connect_error());
     }
-}
+} 
 ?>

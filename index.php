@@ -1,5 +1,13 @@
 <?php
  include_once("funcoes.php");
+ $conecta = conectar();
+    $sql = "SELECT * FROM doces";
+    $resultado = mysqli_query($conecta, $sql);
+    $doce = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+
+    $sql = "SELECT * FROM salgados";
+    $resultado = mysqli_query($conecta, $sql);
+    $salgado = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -48,24 +56,16 @@
                 <th colspan="2">Opções</th>
                     </tr>
                     <?php
-                     foreach($usuario as $usuario){
+                     foreach($doce as $doce){
                      echo "<tr>";
-                     echo "<td>" . $usuario["Nome"] . "</td>";
-                     echo "<td>" . $usuario["Sabor"] . "</td>";
-                     echo "<td>" . $usuario["Ingredientes"] . "</td>";
-                     echo "<td>" . $usuario["Preço"] . "</td>";
-                     echo "<td><a class='button' href='cadres1.php?id=". $usuario['id'] ."' style='text-decoration: none'> Editar </a></td>";
-                     echo "<td><a class='button' href='excres1.php?id=". $usuario['id'] ."' style='text-decoration: none'> Excluir </a></td>";
+                     echo "<td>" . $doce["Nome"] . "</td>";
+                     echo "<td>" . $doce["Sabor"] . "</td>";
+                     echo "<td>" . $doce["Ingredientes"] . "</td>";
+                     echo "<td>" . $doce["Preço"] . "</td>";
+                     echo "<td><a style='color: black' href='cadres1.php?id=". $doce['id'] ."' style='text-decoration: none'> Editar </a></td>";
+                     echo "<td><a style='color: black' href='excres1.php?id=". $doce['id'] ."' style='text-decoration: none'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
-                    <tr>
-                <td>Brigadeiro</td>
-                <td>Chocolate Preto</td>
-                <td>Leite Condensado, Chocolate em Pó, Manteiga.</td>
-                <td>3,00</th>
-                <td><button>Editar</button></td>
-                <td><button>Excluir</button></td>
-                    </tr>
                 </thead>
                 </table>
             </div>
@@ -79,6 +79,17 @@
                 <th>Preço</th>
                 <th colspan="2">Opções</th>
                     </tr>
+                    <?php
+                     foreach($salgado as $salgado){
+                     echo "<tr>";
+                     echo "<td>" . $salgado["Nome"] . "</td>";
+                     echo "<td>" . $salgado["Sabor"] . "</td>";
+                     echo "<td>" . $salgado["Ingredientes"] . "</td>";
+                     echo "<td>" . $salgado["Preço"] . "</td>";
+                     echo "<td><a style='color: black' href='cadres1.php?id=". $salgado['id'] ."' style='text-decoration: none'> Editar </a></td>";
+                     echo "<td><a style='color: black' href='excres1.php?id=". $salgado['id'] ."' style='text-decoration: none'> Excluir </a></td>";
+                     echo "</tr>"; }
+                     ?>
                 </thead>
                 </table>
             </div>
