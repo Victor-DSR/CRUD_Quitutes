@@ -62,8 +62,8 @@
                      echo "<td>" . $doce["Sabor"] . "</td>";
                      echo "<td>" . $doce["Ingredientes"] . "</td>";
                      echo "<td>" . $doce["Preço"] . "</td>";
-                     echo "<td><a style='color: black' href='cadres1.php?id=". $doce['id'] ."' style='text-decoration: none'> Editar </a></td>";
-                     echo "<td><a style='color: black' href='excres1.php?id=". $doce['id'] ."' style='text-decoration: none'> Excluir </a></td>";
+                     echo "<td><a style='color: black' href='cadDoce.php?id=". $doce['id'] ."'> Editar </a></td>";
+                     echo "<td><a style='color: black' href='excDoce.php?id=". $doce['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
                 </thead>
@@ -86,8 +86,8 @@
                      echo "<td>" . $salgado["Sabor"] . "</td>";
                      echo "<td>" . $salgado["Ingredientes"] . "</td>";
                      echo "<td>" . $salgado["Preço"] . "</td>";
-                     echo "<td><a style='color: black' href='cadres1.php?id=". $salgado['id'] ."' style='text-decoration: none'> Editar </a></td>";
-                     echo "<td><a style='color: black' href='excres1.php?id=". $salgado['id'] ."' style='text-decoration: none'> Excluir </a></td>";
+                     echo "<td><a style='color: black' href='cadSal.php?id=". $salgado['id'] ."'> Editar </a></td>";
+                     echo "<td><a style='color: black' href='excSal.php?id=". $salgado['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
                 </thead>
