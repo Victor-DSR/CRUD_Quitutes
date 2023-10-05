@@ -24,16 +24,12 @@
             background-image: url('IMG/fundo.jpg');
         }
         button {
-			color: #000000;
-			background-color: #ffffff;
+			color: #ffffff;
+			background-color: #000000;
 			font-size: 15px;
 			border: 1px solid #ffffff;
 			padding: 5px 30px;
 			cursor: pointer
-		}
-		button:hover {
-			color: #ffffff;
-			background-color: #000000;
 		}
         .container {
             background-color: white;
@@ -43,6 +39,7 @@
         <div class="container">
     <h2> Loja de Quitutes Bom Gosto! </h1> <br>
     <h4> Cardapio de Doces e Salgados: </h4>
+    <hr>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -61,7 +58,7 @@
                      echo "<td>" . $doce["Nome"] . "</td>";
                      echo "<td>" . $doce["Sabor"] . "</td>";
                      echo "<td>" . $doce["Ingredientes"] . "</td>";
-                     echo "<td>" . $doce["Preço"] . "</td>";
+                     echo "<td>R$" . $doce["Preço"] . "</td>";
                      echo "<td><a style='color: black' href='cadDoce.php?id=". $doce['id'] ."'> Editar </a></td>";
                      echo "<td><a style='color: black' href='excDoce.php?id=". $doce['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
@@ -85,7 +82,7 @@
                      echo "<td>" . $salgado["Nome"] . "</td>";
                      echo "<td>" . $salgado["Sabor"] . "</td>";
                      echo "<td>" . $salgado["Ingredientes"] . "</td>";
-                     echo "<td>" . $salgado["Preço"] . "</td>";
+                     echo "<td>R$" . $salgado["Preço"] . "</td>";
                      echo "<td><a style='color: black' href='cadSal.php?id=". $salgado['id'] ."'> Editar </a></td>";
                      echo "<td><a style='color: black' href='excSal.php?id=". $salgado['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
@@ -95,6 +92,14 @@
             </div>
         </div>
     </div>
+    <hr>
+    <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a style='color: black' href='cadDoce.php'> Cadastrar Doce</a></li>
+            <li class="breadcrumb-item"><a style='color: black' href='cadSal.php'> Cadastrar Salgado</a></li>
+            </ol>
+        </nav>
+        <hr>
         </div>
 </body>
 </html>
