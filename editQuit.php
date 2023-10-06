@@ -30,27 +30,27 @@ if(isset($_GET['editDoce']) == TRUE){
         <h1> Editar Cardapio</h1>
         <hr>
         <div class="row">
-            <form action="processa.php" method="POST">
+            <form action="funcoes.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>" />
 
                 <div class="form-group">
                     <label> Nome: </label>
-                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Nome']; ?>"/>
+                    <input class="form-control" type="text" name="nom" value="<?php echo $dados['Nome']; ?>"/>
                 </div>
 
                 <div class="form-group">
                     <label> Sabor: </label>
-                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Sabor']; ?>"/>
+                    <input class="form-control" type="text" name="sab" value="<?php echo $dados['Sabor']; ?>"/>
                 </div>
 
                 <div class="form-group">
                     <label> Ingredientes: </label>
-                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Ingredientes']; ?>"/>
+                    <textarea class="form-control" name="ing" rows="3"><?php echo $dados['Ingredientes']; ?></textarea>
                 </div>
 
                 <div class="form-group">
                     <label> Preço: </label>
-                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Preço']; ?>"/>
+                    <input class="form-control" type="text" name="prc" value="<?php echo $dados['Preço']; ?>"/>
                 </div>
 
                 <div class="form-group">

@@ -46,4 +46,26 @@ if (isset($_GET['delSal'])) {
     mysqli_query(conectar(), $sql);
     header("Location:index.php");
 }
+if (isset($_POST['editDoce'])) {
+    $id = $_POST['id'];
+    $nome = $_POST['nom'];
+    $sabor = $_POST['sab'];
+    $ingrediente = $_POST['ing'];
+    $preco = $_POST['prc'];
+
+    $sql = "UPDATE `doces` SET `Nome` = '$nome', `Sabor` = '$sabor', `Ingredientes` = '$ingrediente', `Preço` = '$preco' WHERE `doces`.`id` = $id;";
+    mysqli_query(conectar(), $sql);
+    header("Location:index.php");
+}
+if (isset($_POST['editSal'])) {
+    $id = $_POST['id'];
+    $nome = $_POST['nom'];
+    $sabor = $_POST['sab'];
+    $ingrediente = $_POST['ing'];
+    $preco = $_POST['prc'];
+
+    $sql = "UPDATE `salgados` SET `Nome` = '$nome', `Sabor` = '$sabor', `Ingredientes` = '$ingrediente', `Preço` = '$preco' WHERE `salgados`.`id` = $id;";
+    mysqli_query(conectar(), $sql);
+    header("Location:index.php");
+}
 ?>
