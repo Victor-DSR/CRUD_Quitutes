@@ -21,7 +21,7 @@
 </head>
 <style> 
         body {
-            background-image: url('IMG/fundo.jpg');
+            background-image: url('IMGs/fundo.jpg');
         }
         button {
 			color: #ffffff;
