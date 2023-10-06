@@ -60,7 +60,7 @@
                      echo "<td>" . $doce["Ingredientes"] . "</td>";
                      echo "<td>R$" . $doce["Preço"] . "</td>";
                      echo "<td><a style='color: black' href='cadDoce.php?id=". $doce['id'] ."'> Editar </a></td>";
-                     echo "<td><a style='color: black' href='excDoce.php?id=". $doce['id'] ."'> Excluir </a></td>";
+                     echo "<td><a style='color: black' href='funcoes.php?delDoce=". $doce['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
                 </thead>
@@ -84,7 +84,7 @@
                      echo "<td>" . $salgado["Ingredientes"] . "</td>";
                      echo "<td>R$" . $salgado["Preço"] . "</td>";
                      echo "<td><a style='color: black' href='cadSal.php?id=". $salgado['id'] ."'> Editar </a></td>";
-                     echo "<td><a style='color: black' href='excSal.php?id=". $salgado['id'] ."'> Excluir </a></td>";
+                     echo "<td><a style='color: black' href='funcoes.php?delSal=". $salgado['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
                 </thead>

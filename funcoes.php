@@ -32,4 +32,18 @@ if (isset($_POST['cadSal'])) {
     mysqli_query(conectar(), $sql);
     header("location:index.php");
 }
+if (isset($_GET['delDoce'])) {
+    $id = $_GET['delDoce'];
+
+    $sql = "DELETE FROM doces WHERE id=$id";
+    mysqli_query(conectar(), $sql);
+    header("Location:index.php");
+}
+if (isset($_GET['delSal'])) {
+    $id = $_GET['delSal'];
+
+    $sql = "DELETE FROM salgados WHERE id=$id";
+    mysqli_query(conectar(), $sql);
+    header("Location:index.php");
+}
 ?>
