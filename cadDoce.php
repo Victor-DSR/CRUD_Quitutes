@@ -16,7 +16,7 @@
         <hr>
         <div class="row">
 
-            <form action="processa.php" method="POST">
+            <form action="funcoes.php" method="POST">
 
                 <div class="form-group">
                     <label> Nome </label>
@@ -25,7 +25,7 @@
 
                 <div class="form-group">
                     <label> Sabor </label>
-                    <input class="form-control" type="sab" name="tel"/>
+                    <input class="form-control" type="text" name="sab"/>
                 </div>
 
                 <div class="form-group">
@@ -35,11 +35,11 @@
 
                 <div class="form-group">
                     <label> Preço </label>
-                    <input class="form-control" type="prc" name="tel"/>
+                    <input class="form-control" type="text" name="prc"/>
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-primary" type="submit" name="cadastrar"> Cadastrar </button>
+                    <button class="btn btn-primary" type="submit" name="cadDoce"> Cadastrar </button>
                 </div>
 
             </form>

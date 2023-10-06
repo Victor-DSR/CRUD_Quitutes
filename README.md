@@ -12,3 +12,9 @@ Banco de Dados:
  - Sabor
  - Ingredientes
  - Preço
+
+CRUD Quitutes;
+ - Cadastrar
+ - Listar
+ - Editar
+ - Excluir
