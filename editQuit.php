@@ -1,20 +1,18 @@
 <?php
-
-include("autenticar.php");
-
-// faz a conexão com o banco
-include_once("conecta.php");
-
-// pega o id vindo via get
-$id = $_GET['editar'];
-
-// Seleciona os dados da tabela contatos 
-$sql = "SELECT * FROM contatos WHERE id=" . $id;
-
-// Executa o Select
-$resultado = mysqli_query($conexao, $sql);
-$dados = mysqli_fetch_assoc($resultado);
-
+include_once("funcoes.php");
+if(isset($_GET['editDoce']) == TRUE){
+    $aux = "editDoce";
+    $id = $_GET['editDoce'];
+    $sql = "SELECT * FROM doces WHERE id=" . $id;   
+        $resultado = mysqli_query(conectar(), $sql);
+        $dados = mysqli_fetch_assoc($resultado); 
+} else{
+    $aux = "editSal";
+    $id = $_GET['editSal'];
+    $sql = "SELECT * FROM salgados WHERE id=" . $id;   
+        $resultado = mysqli_query(conectar(), $sql);
+        $dados = mysqli_fetch_assoc($resultado);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,37 +27,39 @@ $dados = mysqli_fetch_assoc($resultado);
 
 <body>
     <div class="container">
-        <h1> Editar Contato </h1>
+        <h1> Editar Cardapio</h1>
         <hr>
         <div class="row">
             <form action="processa.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>" />
 
                 <div class="form-group">
-                    <label> Nome </label>
-                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['nome']; ?>" required="required" />
+                    <label> Nome: </label>
+                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Nome']; ?>"/>
                 </div>
 
                 <div class="form-group">
-                    <label> Telefone </label>
-                    <input class="form-control" type="text" name="tel" placeholder="(99)9999-9999" value="<?php echo $dados['telefone']; ?>" pattern="(\([0-9]{2}\))([9]{1})?([0-9]{4})-([0-9]{4})" title="Número de telefone precisa ser no formato (99)9999-9999" required="required" />
+                    <label> Sabor: </label>
+                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Sabor']; ?>"/>
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-primary" type="submit" name="editar"> Editar </button>
+                    <label> Ingredientes: </label>
+                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Ingredientes']; ?>"/>
+                </div>
+
+                <div class="form-group">
+                    <label> Preço: </label>
+                    <input class="form-control" type="text" name="nome" value="<?php echo $dados['Preço']; ?>"/>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit" name="<?php echo $aux;?>"> Editar </button>
                 </div>
 
             </form>
         </div>
-
         <hr>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="contatos.php">Agenda de Contatos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Editar</li>
-            </ol>
-        </nav>
-
     </div>
 </body>
 

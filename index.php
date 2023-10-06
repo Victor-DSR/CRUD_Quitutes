@@ -59,7 +59,7 @@
                      echo "<td>" . $doce["Sabor"] . "</td>";
                      echo "<td>" . $doce["Ingredientes"] . "</td>";
                      echo "<td>R$" . $doce["Preço"] . "</td>";
-                     echo "<td><a style='color: black' href='cadDoce.php?id=". $doce['id'] ."'> Editar </a></td>";
+                     echo "<td><a style='color: black' href='editQuit.php?editDoce=". $doce['id'] ."'> Editar </a></td>";
                      echo "<td><a style='color: black' href='funcoes.php?delDoce=". $doce['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
@@ -83,7 +83,7 @@
                      echo "<td>" . $salgado["Sabor"] . "</td>";
                      echo "<td>" . $salgado["Ingredientes"] . "</td>";
                      echo "<td>R$" . $salgado["Preço"] . "</td>";
-                     echo "<td><a style='color: black' href='cadSal.php?id=". $salgado['id'] ."'> Editar </a></td>";
+                     echo "<td><a style='color: black' href='editQuit.php?editSal=". $salgado['id'] ."'> Editar </a></td>";
                      echo "<td><a style='color: black' href='funcoes.php?delSal=". $salgado['id'] ."'> Excluir </a></td>";
                      echo "</tr>"; }
                      ?>
